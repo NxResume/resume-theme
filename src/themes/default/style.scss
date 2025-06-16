@@ -8,7 +8,7 @@
 
 // 主题特定样式
 .markdown-body {
-  font-family: 'pingfang-sc', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'pingfang-sc', 'sans-serif';
 
   h2 {
     &::before {
@@ -19,10 +19,14 @@
       transform: translateY(-50%);
       width: 16px;
       height: 16px;
-      background-image: url(../icon/LineiconsLineiconsSymbol.svg);
+      background-image: url(../../assets/icon/LineiconsLineiconsSymbol.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
     }
+  }
+
+  p {
+    color: var(--link-color);
   }
 }
