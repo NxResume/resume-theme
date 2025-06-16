@@ -1,2 +1,2 @@
-export const one = 1
-export const two = 2
+// 获取主题列表
+// 传入并且设置主题

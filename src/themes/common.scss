@@ -1,7 +1,20 @@
+// 默认主题变量
+:root {
+  --primary-color: #1890ff;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --heading-color: #000000;
+  --link-color: #747474;
+  --code-border-color: #d5dbe7;
+  --code-text-color: #b3bacd;
+  --list-text-color: #666666;
+}
+
+// 基础样式
 .markdown-body {
   h1 {
     font-size: 30px;
-    color: #000;
+    color: var(--heading-color);
     padding: 0;
     line-height: 1.5;
     font-weight: 900;
@@ -32,7 +45,7 @@
 
   .md-icon-svg {
     display: inline-block;
-    color: #747474;
+    color: var(--text-color);
     width: 16px;
     height: 16px;
     vertical-align: middle;
@@ -44,7 +57,7 @@
   }
 
   li {
-    color: #666666;
+    color: var(--list-text-color);
     list-style-type: square;
   }
 
@@ -53,25 +66,25 @@
     overflow: hidden;
     margin-bottom: 0px;
     font-size: 14px;
+    color: var(--text-color);
   }
 
   code {
     padding: 2px 5px;
-    border: 1px solid #d5dbe7;
+    border: 1px solid var(--code-border-color);
     border-radius: 30px;
     font-size: 12px;
     line-height: 14px;
-    color: #b3bacd;
+    color: var(--code-text-color);
     background-color: transparent;
   }
 
   a {
-    color: #747474;
+    color: var(--link-color);
     text-decoration: none;
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    -webkit-transition: color 0.3s;
     transition: color 0.3s;
   }
 
@@ -79,10 +92,11 @@
     font-size: 12px;
     text-decoration: none;
     margin: 0 4px;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed var(--text-color);
   }
 }
 
+// 通用组件样式
 .icon-md {
   display: inline-block;
   vertical-align: middle;

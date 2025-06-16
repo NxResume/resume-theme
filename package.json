@@ -2,8 +2,8 @@
   "name": "resume-theme",
   "type": "module",
   "version": "0.0.4",
-  "packageManager": "pnpm@10.7.0",
-  "description": "_description_",
+  "packageManager": "pnpm@10.12.1",
+  "description": "A collection of beautiful resume themes for NxResume",
   "author": "ryanuo <ryanuo@aliyun.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ryanuo",
@@ -13,13 +13,25 @@
     "url": "git+https://github.com/NxResume/resume-theme.git"
   },
   "bugs": "https://github.com/NxResume/resume-theme/issues",
-  "keywords": [],
+  "keywords": [
+    "resume",
+    "theme",
+    "nxresume",
+    "css",
+    "scss"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./themes": {
+      "default": "./dist/themes/index.css"
+    },
+    "./themes/*": {
+      "default": "./dist/themes/*/style.css"
     }
   },
   "main": "./dist/index.mjs",
@@ -51,10 +63,12 @@
     "@antfu/eslint-config": "catalog:dev",
     "@antfu/ni": "catalog:dev",
     "@antfu/utils": "catalog:dev",
+    "@types/fs-extra": "catalog:dev",
     "@types/node": "catalog:dev",
     "bumpp": "catalog:dev",
     "eslint": "catalog:dev",
     "esno": "catalog:dev",
+    "fs-extra": "catalog:dev",
     "lint-staged": "catalog:dev",
     "sass": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
@@ -62,7 +76,9 @@
     "unbuild": "catalog:dev",
     "vite": "catalog:dev",
     "vitest": "catalog:dev"
-
+  },
+  "overrides": {
+    "jiti": "2.4.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
