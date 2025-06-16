@@ -78,7 +78,7 @@ async function generateThemeIndex() {
     .join('\n')
 
   // 写入编译后的 CSS
-  await writeFile(resolve('dist/themes/index.css'), `${result.css}${imports}`)
+  await writeFile(resolve('dist/themes/index.css'), `${imports}${result.css}`)
 }
 
 export default defineBuildConfig({
