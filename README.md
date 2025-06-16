@@ -1,77 +1,112 @@
 # Resume Theme
 
-A collection of beautiful resume themes for NxResume.
+一个简单易用的简历主题切换工具。
 
-## Installation
+## 功能特性
+
+- 支持多主题切换
+- TypeScript 支持
+- 简单易用的 API
+- 支持 Nuxt.js 集成
+
+## 安装
 
 ```bash
+npm install resume-theme
+# 或
+yarn add resume-theme
+# 或
 pnpm add resume-theme
 ```
 
-## Usage
+## 使用方法
 
-### Import All Themes
+### 基础使用
 
-```css
-/* Import all themes */
-@import 'resume-theme/themes';
+```typescript
+import { ThemeName, getCurrentTheme, getThemeList, setTheme } from 'resume-theme'
+
+// 设置主题
+setTheme(ThemeName.Default)
+
+// 获取主题列表
+const themes = getThemeList()
+
+// 获取当前主题
+const currentTheme = getCurrentTheme()
 ```
 
-### Import Specific Theme
+### 在 Nuxt.js 中使用
 
-```css
-/* Import specific theme */
-@import 'resume-theme/themes/default';
-/* or */
-@import 'resume-theme/themes/test';
+1. 在 `nuxt.config.ts` 中添加配置：
+
+```typescript
+export default defineNuxtConfig({
+  build: {
+    transpile: ['resume-theme']
+  }
+})
 ```
 
-### Use in HTML
+2. 在组件中使用：
 
-Add the `data-resume-theme` attribute to your HTML element to apply a specific theme:
+```vue
+<script setup>
+import { ThemeName, setTheme } from 'resume-theme'
 
-```html
-<!-- Use default theme -->
-<div data-resume-theme="default">
-  <!-- Your resume content -->
-</div>
+onMounted(() => {
+  setTheme(ThemeName.Default)
+})
+</script>
 
-<!-- Use test theme -->
-<div data-resume-theme="test">
-  <!-- Your resume content -->
-</div>
+<template>
+  <div :data-resume-theme="getCurrentTheme()">
+    <!-- 你的内容 -->
+  </div>
+</template>
 ```
 
-## Available Themes
+## API 文档
 
-### Default Theme
+### ThemeName
 
-A clean and professional theme with a modern design.
+主题名称枚举：
 
-### Test Theme
+```typescript
+enum ThemeName {
+  Default = 'default',
+  Test = 'test'
+}
+```
 
-A test theme for development and customization.
+### setTheme(themeName: ThemeName)
 
-## Development
+设置当前主题。
+
+### getThemeList(): ThemeName[]
+
+获取所有可用的主题列表。
+
+### getCurrentTheme(): ThemeName
+
+获取当前使用的主题。
+
+## 主题开发
+
+1. 在 `src/themes` 目录下创建新的主题目录
+2. 在主题目录中创建 `style.scss` 文件
+3. 在 `ThemeName` 枚举中添加新的主题名称
+
+## 构建
 
 ```bash
-# Install dependencies
+# 安装依赖
 pnpm install
 
-# Start development
-pnpm dev
-
-# Build
+# 构建
 pnpm build
-
-# Run tests
-pnpm test
 ```
 
-## Contributing
+## 许可证
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[MIT](./LICENSE) License © 2024 [ryanuo](https://github.com/ryanuo)
+MIT
