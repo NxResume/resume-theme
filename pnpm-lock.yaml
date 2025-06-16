@@ -15,6 +15,9 @@ catalogs:
     '@antfu/utils':
       specifier: ^9.2.0
       version: 9.2.0
+    '@types/fs-extra':
+      specifier: ^11.0.4
+      version: 11.0.4
     '@types/node':
       specifier: ^20.19.1
       version: 20.19.1
@@ -27,6 +30,9 @@ catalogs:
     esno:
       specifier: ^4.8.0
       version: 4.8.0
+    fs-extra:
+      specifier: ^11.3.0
+      version: 11.3.0
     lint-staged:
       specifier: ^15.5.2
       version: 15.5.2
@@ -63,7 +69,7 @@ importers:
         specifier: catalog:dev
         version: 9.2.0
       '@types/fs-extra':
-        specifier: ^11.0.4
+        specifier: catalog:dev
         version: 11.0.4
       '@types/node':
         specifier: catalog:dev
@@ -78,7 +84,7 @@ importers:
         specifier: catalog:dev
         version: 4.8.0
       fs-extra:
-        specifier: ^11.3.0
+        specifier: catalog:dev
         version: 11.3.0
       lint-staged:
         specifier: catalog:dev
