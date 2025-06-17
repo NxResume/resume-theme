@@ -12,6 +12,8 @@
 
 // 基础样式
 .markdown-body {
+  font-family: var(--defaults-markdwon-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+
   h1 {
     font-size: 30px;
     color: var(--heading-color);
