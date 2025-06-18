@@ -9,6 +9,7 @@ export enum ThemeName {
   NoIcon = 'noIcon',
   BlackToppedSimple = 'blackToppedSimple',
   BlueSimplicity = 'blueSimplicity',
+  MinimalistColors = 'minimalistColors',
 }
 
 /**
