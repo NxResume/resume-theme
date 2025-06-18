@@ -1,4 +1,4 @@
-@use 'themes/nopadding.scss';
+@use 'themes/pageNoPadding.scss';
 
 .markdown-body {
   --line-height: 1.8;
@@ -6,6 +6,8 @@
   h1 {
     color: #fff;
     background: rgba(var(--bg));
+    padding: var(--padding-size);
+    padding-bottom: 5px;
   }
 
   h2 {
