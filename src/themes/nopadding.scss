@@ -1,0 +1,35 @@
+.markdown-body {
+  --padding-size: 36px;
+
+  h1 {
+    padding: var(--padding-size);
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .lr-container,
+  h2,
+  h3 {
+    padding: 0 var(--padding-size);
+  }
+
+  .rs-page-item {
+    padding: 0;
+    padding-bottom: var(--padding-size);
+    padding-top: var(--padding-size); // 所有项默认添加 padding-top
+
+    > p {
+      padding: 0 var(--padding-size);
+    }
+
+    &:first-child {
+      // 仅第一个元素的 padding-top 为 0
+      padding-top: 0;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 52px;
+  }
+}

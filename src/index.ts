@@ -8,6 +8,7 @@ export enum ThemeName {
   BlackBarSimplicity = 'blackBarSimplicity',
   NoIcon = 'noIcon',
   BlackToppedSimple = 'blackToppedSimple',
+  BlueSimplicity = 'blueSimplicity',
 }
 
 /**

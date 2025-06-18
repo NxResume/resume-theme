@@ -12,17 +12,24 @@ async function compileScss(input: string, output: string, themeName: string) {
     encoding: 'utf-8',
   })
 
-  // 包装在 data-resume-theme 选择器中
-  const wrappedContent = `[data-resume-theme="${themeName}"] {\n${content}\n}`
+  // 先编译原始 SCSS 内容，获取完整的 CSS 输出
+  const initialResult = sass.compileString(content, {
+    style: 'expanded', // 保持扩展格式以便后续处理
+    loadPaths: ['./src'],
+  })
 
-  // 编译 SCSS
-  const result = sass.compileString(wrappedContent, {
+  // 将整个 CSS 输出包装在主题选择器中
+  const wrappedContent = `[data-resume-theme="${themeName}"] {
+  ${initialResult.css}
+}`
+
+  // 再次编译，生成最终的压缩 CSS
+  const finalResult = sass.compileString(wrappedContent, {
     style: 'compressed',
-    loadPaths: ['src'],
   })
 
   // 写入编译后的 CSS
-  await writeFile(output, result.css)
+  await writeFile(output, finalResult.css)
 }
 
 // 遍历主题文件夹并编译
