@@ -1,0 +1,84 @@
+.markdown-body {
+  --padding-size: 36px;
+  --line-height: 1.8;
+
+  h1 {
+    color: #fff;
+    background: rgba(var(--bg));
+    padding: var(--padding-size);
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .lr-container,
+  h2,
+  h3 {
+    padding: 0 var(--padding-size);
+  }
+
+  h2 {
+    position: relative;
+    z-index: 1;
+    padding: 0 !important;
+    width: 180px;
+    margin: 5px auto;
+    border-radius: 32px;
+    text-align: center !important;
+    background-color: #eee;
+    font-size: 18px;
+
+    &::before {
+      content: '';
+      width: calc((794px - 50px * 2 - 180px - 20px * 2) / 2);
+      position: absolute;
+      top: 50%;
+      height: 0;
+      right: calc(100% + 20px);
+      border-top: 1px solid #ededed;
+    }
+
+    &::after {
+      content: '';
+      width: calc((794px - 50px * 2 - 180px - 20px * 2) / 2);
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 20px);
+      right: 0;
+      border-top: 1px solid #ededed;
+    }
+  }
+
+  .lr-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #fff !important;
+    background: rgba(var(--bg));
+    margin-top: 0;
+
+    p,
+    a,
+    svg {
+      color: #fff;
+    }
+  }
+
+  .rs-page-item {
+    padding: 0;
+    padding-bottom: var(--padding-size);
+    padding-top: var(--padding-size); // 所有项默认添加 padding-top
+
+    > p {
+      padding: 0 var(--padding-size);
+    }
+
+    &:first-child {
+      // 仅第一个元素的 padding-top 为 0
+      padding-top: 0;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 52px;
+  }
+}

@@ -8,11 +8,16 @@
   --code-border-color: #d5dbe7;
   --code-text-color: #b3bacd;
   --list-text-color: #666666;
+  --bg: 0, 0, 0;
+  --font-size: 14px;
+  --line-height: 1.9;
 }
 
 // 基础样式
 .markdown-body {
   font-family: var(--defaults-markdwon-family, "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'");
+  line-height: var(--line-height, 1.9);
+  font-size: var(--font-size, 14px);
 
   h1 {
     font-size: 30px;
@@ -41,9 +46,6 @@
     margin-top: 0px;
     margin-bottom: 2px;
   }
-
-  line-height: 1.9;
-  font-size: 14px;
 
   .md-icon-svg {
     display: inline-block;

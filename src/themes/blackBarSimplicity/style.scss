@@ -1,0 +1,15 @@
+.markdown-body {
+  --list-text-color: #000;
+  --link-color: #0a0909;
+
+  h2 {
+    border-left: 5px solid rgba(var(--bg));
+    border-bottom: 0px;
+    padding-left: 10px;
+    background-color: rgba(var(--bg), 0.05);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}

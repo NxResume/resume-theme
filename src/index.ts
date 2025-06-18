@@ -5,7 +5,9 @@
  */
 export enum ThemeName {
   Default = 'default',
-  Test = 'test',
+  BlackBarSimplicity = 'blackBarSimplicity',
+  NoIcon = 'noIcon',
+  BlackToppedSimple = 'blackToppedSimple',
 }
 
 /**
@@ -13,7 +15,7 @@ export enum ThemeName {
  * @returns {ThemeName[]} 主题名称数组
  */
 export function getThemeList(): ThemeName[] {
-  return [ThemeName.Default, ThemeName.Test]
+  return Object.values(ThemeName)
 }
 
 /**

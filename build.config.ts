@@ -89,6 +89,9 @@ export default defineBuildConfig({
   clean: false,
   rollup: {
     emitCJS: true,
+    output: {
+      exports: 'named',
+    },
   },
   hooks: {
     'build:prepare': async () => {
