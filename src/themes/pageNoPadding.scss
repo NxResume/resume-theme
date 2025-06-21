@@ -1,5 +1,5 @@
 .markdown-body {
-  --padding-size: 36px;
+  --resume-page-padding-size: 36px;
 
   h1 {
     margin: 0;
@@ -8,16 +8,16 @@
   .lr-container,
   h2,
   h3 {
-    padding: 0 var(--padding-size);
+    padding: 0 var(--resume-page-padding-size);
   }
 
   .rs-page-item {
     padding: 0;
-    padding-bottom: var(--padding-size);
-    padding-top: var(--padding-size); // 所有项默认添加 padding-top
+    padding-bottom: var(--resume-page-padding-size);
+    padding-top: var(--resume-page-padding-size); // 所有项默认添加 padding-top
 
     > p {
-      padding: 0 var(--padding-size);
+      padding: 0 var(--resume-page-padding-size);
     }
 
     &:first-child {
