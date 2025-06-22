@@ -5,7 +5,7 @@
 
   h1 {
     color: #fff;
-    background: rgba(var(--bg));
+    background: rgba(var(--resume-page-theme));
     padding: var(--resume-page-padding-size);
     padding-bottom: 5px;
   }
@@ -46,7 +46,7 @@
     padding-top: 10px;
     padding-bottom: 20px;
     color: #fff !important;
-    background: rgba(var(--bg));
+    background: rgba(var(--resume-page-theme));
     margin-top: 0;
 
     p,

@@ -1,13 +1,13 @@
 .markdown-body {
-  --bg: 89, 116, 212;
+  --resume-page-theme: 89, 116, 212;
   --link-color: #333333;
   --list-text-color: #333333;
 
   h2 {
     position: relative;
     font-size: 20px;
-    color: rgba(var(--bg));
-    border-bottom: 1px solid rgba(var(--bg));
+    color: rgba(var(--resume-page-theme));
+    border-bottom: 1px solid rgba(var(--resume-page-theme));
     line-height: 1.5715;
     margin-left: 5px;
   }
