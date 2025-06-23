@@ -10,13 +10,13 @@
   --list-text-color: #666666;
   --resume-page-theme: 0, 0, 0;
   --font-size: 14px;
-  --line-height: 1.9;
+  --resume-line-height: 1.9;
 }
 
 // 基础样式
 .markdown-body {
   font-family: var(--defaults-markdwon-family, "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'");
-  line-height: var(--line-height, 1.9);
+  line-height: var(--resume-line-height, 1.9);
   font-size: var(--font-size, 14px);
 
   h1 {
