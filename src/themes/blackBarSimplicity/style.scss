@@ -1,7 +1,9 @@
-.markdown-body {
+:root {
   --list-text-color: #000;
   --link-color: #0a0909;
+}
 
+.markdown-body {
   h2 {
     border-left: 5px solid rgba(var(--resume-page-theme));
     border-bottom: 0px;

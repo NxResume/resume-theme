@@ -1,8 +1,10 @@
 @use 'themes/pageNoPadding.scss';
 
-.markdown-body {
+:root {
   --resume-line-height: 1.8;
+}
 
+.markdown-body {
   h1 {
     color: #fff;
     background: rgba(var(--resume-page-theme));

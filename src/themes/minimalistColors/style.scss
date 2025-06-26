@@ -1,8 +1,10 @@
-.markdown-body {
+:root {
   --resume-page-theme: 89, 116, 212;
   --link-color: #333333;
   --list-text-color: #333333;
+}
 
+.markdown-body {
   h2 {
     position: relative;
     font-size: 20px;
