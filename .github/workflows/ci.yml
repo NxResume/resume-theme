@@ -51,9 +51,6 @@ jobs:
       - name: Install
         run: nci
 
-      - name: prisma generate
-        run: npx prisma generate
-
       - name: Typecheck
         run: nr typecheck
 
