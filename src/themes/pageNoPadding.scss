@@ -1,6 +1,8 @@
-.markdown-body {
+:root {
   --resume-page-padding-size: 36px;
+}
 
+.markdown-body {
   h1 {
     margin: 0;
   }
@@ -28,6 +30,6 @@
 
   ul,
   ol {
-    padding: 0 52px;
+    padding: 0 calc(var(--resume-page-padding-size, 36px) + 16px);
   }
 }
