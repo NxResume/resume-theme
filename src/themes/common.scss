@@ -11,6 +11,7 @@
   --resume-page-theme: 0, 0, 0;
   --font-size: 14px;
   --resume-line-height: 1.9;
+  --resume-underline-offset: 4px;
 }
 
 // 基础样式
@@ -71,6 +72,14 @@
     margin-bottom: 0px;
     font-size: 14px;
     color: var(--text-color);
+
+    a {
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      text-decoration-color: var(--link-color);
+      text-decoration-thickness: 1px;
+      text-underline-offset: var(--resume-underline-offset);
+    }
   }
 
   code {
