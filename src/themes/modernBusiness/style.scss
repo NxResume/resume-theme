@@ -1,0 +1,47 @@
+// 主题特定样式:藏青金线商务风,通栏姓名栏 + 菱形标记章节标题
+@use 'themes/pageNoPadding.scss';
+
+.markdown-body {
+  // 变量定义在 .markdown-body 上而非 :root,避免打包后 [data-resume-theme] :root 选择器失效
+  --resume-page-theme: 25, 42, 78;
+  --resume-page-padding-size: 36px;
+
+  h1 {
+    margin: 0;
+    color: #fff;
+    background: rgb(var(--resume-page-theme));
+    border-bottom: 4px solid #c9a25e;
+    padding: 14px var(--resume-page-padding-size, 36px);
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    margin: 20px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e4e7ec;
+    color: rgb(var(--resume-page-theme));
+    font-size: 17px;
+    font-weight: 700;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 10px;
+      background: #c9a25e;
+      transform: rotate(45deg);
+      vertical-align: 1px;
+    }
+  }
+
+  h3 {
+    color: rgb(var(--resume-page-theme));
+  }
+
+  a {
+    color: rgb(var(--resume-page-theme));
+  }
+}

@@ -1,0 +1,42 @@
+// 主题特定样式:靛蓝科技标签风,浅靛头部 + 圆角标签章节标题
+@use 'themes/pageNoPadding.scss';
+
+.markdown-body {
+  --resume-page-theme: 67, 56, 202;
+  --resume-page-padding-size: 36px;
+
+  h1 {
+    margin: 0;
+    padding: 16px var(--resume-page-padding-size, 36px);
+    background: #eef2ff;
+    border-bottom: 1px solid #e0e7ff;
+    color: #1e1b4b;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    display: inline-block;
+    margin: 16px 0 10px var(--resume-page-padding-size, 36px);
+    padding: 3px 14px;
+    background: rgba(var(--resume-page-theme), 0.08);
+    border-radius: 6px;
+    color: rgb(var(--resume-page-theme));
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  h3 {
+    color: #1e293b;
+  }
+
+  li::marker {
+    color: rgb(var(--resume-page-theme));
+  }
+
+  a {
+    color: rgb(var(--resume-page-theme));
+  }
+}

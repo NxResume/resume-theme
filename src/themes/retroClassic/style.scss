@@ -1,0 +1,45 @@
+// 主题特定样式:墨韵朱红古典风,衬线正文 + 印章式点缀
+.markdown-body {
+  --resume-page-theme: 142, 36, 42;
+  font-family: Georgia, "Times New Roman", "Songti SC", "STSong", SimSun, "Noto Serif CJK SC", serif;
+
+  h1 {
+    margin: 10px 0 20px;
+    text-align: center;
+    color: #26221d;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 42px;
+      height: 3px;
+      margin: 10px auto 0;
+      background: rgb(var(--resume-page-theme));
+    }
+  }
+
+  h2 {
+    margin: 22px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd2c4;
+    color: rgb(var(--resume-page-theme));
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  h3 {
+    color: #26221d;
+  }
+
+  li::marker {
+    color: rgb(var(--resume-page-theme));
+  }
+
+  a {
+    color: rgb(var(--resume-page-theme));
+  }
+}

@@ -11,6 +11,9 @@ export enum ThemeName {
   BlueSimplicity = 'blueSimplicity',
   MinimalistColors = 'minimalistColors',
   GrayBarSimplicity = 'grayBarSimplicity',
+  ModernBusiness = 'modernBusiness',
+  RetroClassic = 'retroClassic',
+  TechIndigo = 'techIndigo',
 }
 
 /**
