@@ -2,8 +2,9 @@
 @use 'themes/pageNoPadding.scss';
 
 .markdown-body {
-  // 变量定义在 .markdown-body 上而非 :root,避免打包后 [data-resume-theme] :root 选择器失效
-  --resume-page-theme: 25, 42, 78;
+  // 变量定义在 .markdown-body 上而非 :root,避免打包后 [data-resume-theme] :root 选择器失效。
+  // 用 var() 回退链：编辑器把用户主题色写到 --resume-theme-color，未设置时用主题签名色。
+  --resume-page-theme: var(--resume-theme-color, 25, 42, 78);
   --resume-page-padding-size: 36px;
 
   h1 {

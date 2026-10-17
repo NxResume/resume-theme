@@ -2,7 +2,7 @@
 @use 'themes/pageNoPadding.scss';
 
 .markdown-body {
-  --resume-page-theme: 67, 56, 202;
+  --resume-page-theme: var(--resume-theme-color, 67, 56, 202);
   --resume-page-padding-size: 36px;
 
   h1 {

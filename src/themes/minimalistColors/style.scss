@@ -1,10 +1,14 @@
 :root {
-  --resume-page-theme: 89, 116, 212;
+  // 注意：主题文件里的 :root 会被打包成 [data-resume-theme=x] :root，永远匹配不到元素，
+  // 这两条历史声明目前不生效（保持原样以免改变现有观感）。主题色见下方 .markdown-body。
   --link-color: #333333;
   --list-text-color: #333333;
 }
 
 .markdown-body {
+  // 主题签名色：用户主题色（--resume-theme-color）优先，未设置时用它。
+  --resume-page-theme: var(--resume-theme-color, 89, 116, 212);
+
   h2 {
     position: relative;
     font-size: 20px;

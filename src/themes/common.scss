@@ -8,7 +8,10 @@
   --code-border-color: #d5dbe7;
   --code-text-color: #b3bacd;
   --list-text-color: #666666;
-  --resume-page-theme: 0, 0, 0;
+  // 主题色统一入口：编辑器把用户选的主题色写到 --resume-theme-color（继承下来），
+  // 没选色时回退到主题签名色。不要在主题里直接写死 --resume-page-theme 的色值，
+  // 否则它会变成「元素自身声明」，把继承下来的用户色彻底压掉。
+  --resume-page-theme: var(--resume-theme-color, 0, 0, 0);
   --font-size: 14px;
   --resume-line-height: 1.9;
   --resume-underline-offset: 4px;

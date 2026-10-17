@@ -1,7 +1,9 @@
 // 主题特定样式:墨韵朱红古典风,衬线正文 + 印章式点缀
 .markdown-body {
-  --resume-page-theme: 142, 36, 42;
-  font-family: Georgia, "Times New Roman", "Songti SC", "STSong", SimSun, "Noto Serif CJK SC", serif;
+  --resume-page-theme: var(--resume-theme-color, 142, 36, 42);
+  // 衬线是这套主题的签名，但用户明确选了字体时要能让位：
+  // 写在 .markdown-body 上是元素自身声明，写死就再也改不动（同一坑见主题色）
+  font-family: var(--defaults-markdwon-family, Georgia, "Times New Roman", "Songti SC", "STSong", SimSun, "Noto Serif CJK SC", serif);
 
   h1 {
     margin: 10px 0 20px;

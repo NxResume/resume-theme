@@ -1,10 +1,11 @@
 @use 'themes/pageNoPadding.scss';
 
-:root {
-  --resume-page-theme: 75, 106, 143;
-}
-
 .markdown-body {
+  // 主题签名色：用户主题色（--resume-theme-color）优先，未设置时用它。
+  // 不能写在 :root —— 打包会包成 [data-resume-theme=x] { ... }，:root 变成
+  // 「自己的后代」，永远匹配不到 <html>，规则整条失效。
+  --resume-page-theme: var(--resume-theme-color, 75, 106, 143);
+
   h1 {
     margin-top: 20px;
     margin-bottom: 10px;
