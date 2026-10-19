@@ -1,6 +1,9 @@
 // 主题特定样式:墨韵朱红古典风,衬线正文 + 印章式点缀
 .markdown-body {
   --resume-page-theme: var(--resume-theme-color, 142, 36, 42);
+  // 列表文字跟随正文墨色：默认的 --list-text-color(#666) 与这套暖墨色正文不搭，
+  // 也让紧凑列表（读 li）和松散列表（li > p 读 --text-color）颜色一致。
+  --list-text-color: var(--text-color);
   // 衬线是这套主题的签名，但用户明确选了字体时要能让位：
   // 写在 .markdown-body 上是元素自身声明，写死就再也改不动（同一坑见主题色）
   font-family: var(--defaults-markdwon-family, Georgia, "Times New Roman", "Songti SC", "STSong", SimSun, "Noto Serif CJK SC", serif);
