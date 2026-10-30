@@ -5,8 +5,9 @@
   --background-color: #ffffff;
   --heading-color: #000000;
   --link-color: #363636;
+  --code-bg-color: transparent;
   --code-border-color: #d5dbe7;
-  --code-text-color: #b3bacd;
+  --code-text-color: #52647d;
   --list-text-color: #252424;
   // 主题色统一入口：编辑器把用户选的主题色写到 --resume-theme-color（继承下来），
   // 没选色时回退到主题签名色。不要在主题里直接写死 --resume-page-theme 的色值，
@@ -86,13 +87,15 @@
   }
 
   code {
-    padding: 2px 5px;
+    background-color: var(--code-bg-color);
     border: 1px solid var(--code-border-color);
-    border-radius: 30px;
-    font-size: 12px;
-    line-height: 14px;
+    border-radius: 4px;
     color: var(--code-text-color);
-    background-color: transparent;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 1px 6px;
+    font-weight: 400;
+    white-space: nowrap;
   }
 
   a {
